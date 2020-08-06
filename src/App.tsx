@@ -2,7 +2,8 @@ import React from 'react';
 import { Store } from './redux/store';
 
 const App = (): JSX.Element => {
-  console.log(Store);
+  const store = React.useContext(Store);
+  console.log(store);
   return (
     <>
       <h1>Television</h1>
