@@ -14,7 +14,7 @@ const App = ({ children }: { children: JSX.Element }): JSX.Element => {
         </div>
         <div>
           <Link to="/">Home</Link>
-          <Link to="/faves">Favourite(s): {state.favorites.length}</Link>
+          <Link to="/favorites">Favorite(s): {state.favorites.length}</Link>
         </div>
       </header>
       {children}
