@@ -1,25 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Store } from './redux/store';
 
-function App() {
+const App = (): JSX.Element => {
+  console.log(Store);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img
-          src="https://res.cloudinary.com/dh41vh9dx/image/upload/v1593147623/Logo_Abstract.png"
-          className="App-logo"
-          alt="logo"
-        />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Television</h1>
+      <p>your taste</p>
+    </>
   );
-}
+};
 
 export default App;
