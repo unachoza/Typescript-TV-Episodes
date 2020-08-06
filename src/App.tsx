@@ -4,7 +4,6 @@ import { Link } from '@reach/router';
 
 const App = ({ children }: { children: JSX.Element }): JSX.Element => {
   const { state } = useContext(Store);
-  console.log(state);
   return (
     <>
       <header className="header">

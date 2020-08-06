@@ -11,7 +11,6 @@ interface IProps {
 export default function EpisodesList(props: IProps): Array<JSX.Element> {
   const { episodes, toggleFavAction, favorites, store } = props;
   const { state, dispatch } = store;
-  console.log('really though? not defined at all', episodes);
 
   return episodes.map((episode: IEpisode) => {
     return (

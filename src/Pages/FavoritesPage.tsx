@@ -16,7 +16,6 @@ export default function FavPage(): JSX.Element {
     toggleFavAction,
     favorites: state.favorites,
   };
-  console.log('these are props', props);
   return (
     <App>
       <Suspense fallback={<div>loading...</div>}>
