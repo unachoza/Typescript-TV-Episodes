@@ -11,15 +11,16 @@ interface IProps {
 export default function EpisodesList(props: IProps): Array<JSX.Element> {
   const { episodes, toggleFavAction, favorites, store } = props;
   const { state, dispatch } = store;
+  console.log('really though? not defined at all', episodes);
 
   return episodes.map((episode: IEpisode) => {
     return (
       <section key={episode.id} className="episode-box">
-        <img src={!!episode.image ? episode.image.medium : ''} alt={`Rick and Mort ${episode.name}`} />
+        <img src={!!episode.image ? episode.image.medium : ''} alt={`Girls ${episode.name}`} />
         <div>{episode.name}</div>
         <section style={{ display: 'flex', justifyContent: 'space-between' }}>
           <div>
-            Seasion: {episode.season} Number: {episode.number}
+            Season: {episode.season} Number: {episode.number}
           </div>
           <button type="button" onClick={() => toggleFavAction(state, dispatch, episode)}>
             {favorites.find((fav: IEpisode) => fav.id === episode.id) ? 'Unfav' : 'Fav'}

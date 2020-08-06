@@ -4,12 +4,15 @@ import { IState, IAction } from '../Types/types';
 const initialState: IState = {
   episodes: [],
   favorites: [],
+  query: 'string',
 };
 
 export const Store = createContext<IState | any>(initialState);
 
 function reducer(state: IState, action: IAction): IState {
   switch (action.type) {
+    case 'UPDATE_QUERY':
+      return { ...state, query: action.payload };
     case 'FETCH_DATA':
       return { ...state, episodes: action.payload };
     case 'ADD_FAV':

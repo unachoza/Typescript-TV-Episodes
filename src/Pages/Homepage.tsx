@@ -7,7 +7,7 @@ import { fetchDataAction, toggleFavAction } from '../redux/actions.redux';
 
 const EpisodeList = React.lazy<any>(() => import('../Components/EpisodeList'));
 
-export default function HomePage() {
+const HomePage = () => {
   const { state, dispatch } = useContext(Store);
 
   useEffect(() => {
@@ -23,11 +23,12 @@ export default function HomePage() {
 
   return (
     <App>
-      <React.Suspense fallback={<div>loading...</div>}>
+      <Suspense fallback={<div>loading...</div>}>
         <section className="episode-layout">
           <EpisodeList {...props} />
         </section>
-      </React.Suspense>
+      </Suspense>
     </App>
   );
-}
+};
+export default HomePage;

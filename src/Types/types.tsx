@@ -3,6 +3,7 @@ export type FavAction = (state: IState, dispatch: Dispatch, episode: IEpisode) =
 export interface IState {
   episodes: Array<IEpisode>;
   favorites: Array<IEpisode>;
+  query: 'string';
 }
 
 export interface IAction {

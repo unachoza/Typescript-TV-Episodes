@@ -4,13 +4,17 @@ import { Link } from '@reach/router';
 
 const App = ({ children }: { children: JSX.Element }): JSX.Element => {
   const { state } = useContext(Store);
-
+  console.log(state);
   return (
     <>
       <header className="header">
         <div>
           <h1>Television</h1>
           <p>You have nice taste!!!</p>
+          <form>
+            <label id="query"></label>
+            <input type="text" id="query" />
+          </form>
         </div>
         <div>
           <Link to="/">Home</Link>
