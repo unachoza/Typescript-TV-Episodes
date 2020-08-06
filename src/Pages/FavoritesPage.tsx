@@ -11,7 +11,7 @@ export default function FavPage(): JSX.Element {
   const { state, dispatch } = useContext(Store);
 
   const props: IEpisodeProps = {
-    episodes: state.favourites,
+    episodes: state.favorites,
     store: { state, dispatch },
     toggleFavAction,
     favorites: state.favorites,
