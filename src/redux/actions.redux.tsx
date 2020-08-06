@@ -1,4 +1,3 @@
-import React from 'react';
 import { IAction, IEpisode, IState, Dispatch } from '../Types/types';
 
 export const fetchDataAction = async (dispatch: Dispatch) => {
