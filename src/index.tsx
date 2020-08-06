@@ -13,7 +13,7 @@ ReactDOM.render(
   <StoreProvider>
     <Router>
       <RouterPage pageComponent={<HomePage />} path="/" />
-      <RouterPage pageComponent={<FavoritesPage />} path="/faves" />
+      <RouterPage pageComponent={<FavoritesPage />} path="/favorites" />
     </Router>
   </StoreProvider>,
   document.getElementById('root')

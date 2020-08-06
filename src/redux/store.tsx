@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useReducer } from 'react';
 import { IState, IAction } from '../Types/types';
 
 const initialState: IState = {
@@ -6,7 +6,7 @@ const initialState: IState = {
   favorites: [],
 };
 
-export const Store = React.createContext<IState | any>(initialState);
+export const Store = createContext<IState | any>(initialState);
 
 function reducer(state: IState, action: IAction): IState {
   switch (action.type) {
@@ -22,6 +22,6 @@ function reducer(state: IState, action: IAction): IState {
 }
 
 export function StoreProvider({ children }: JSX.ElementChildrenAttribute): JSX.Element {
-  const [state, dispatch] = React.useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
   return <Store.Provider value={{ state, dispatch }}>{children}</Store.Provider>;
 }

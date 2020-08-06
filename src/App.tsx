@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Store } from './redux/store';
 import { Link } from '@reach/router';
 
 const App = ({ children }: { children: JSX.Element }): JSX.Element => {
-  const { state } = React.useContext(Store);
+  const { state } = useContext(Store);
 
   return (
     <>
@@ -14,7 +14,7 @@ const App = ({ children }: { children: JSX.Element }): JSX.Element => {
         </div>
         <div>
           <Link to="/">Home</Link>
-          <Link to="/faves">Favourite(s): {state.favourites.length}</Link>
+          <Link to="/faves">Favourite(s): {state.favorites.length}</Link>
         </div>
       </header>
       {children}
